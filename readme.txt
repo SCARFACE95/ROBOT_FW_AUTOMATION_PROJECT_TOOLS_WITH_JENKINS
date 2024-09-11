@@ -1,0 +1,2 @@
+- fac un proiect cu POM pt partea de WEB in format TDD
+- https://practicesoftwaretesting.com/

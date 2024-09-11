@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.0 on win32)" generated="2024-09-11T15:04:34.686080" rpa="false" schemaversion="5">
+<suite id="s1" name="TCS Register Functionality" source="D:\Proiecte_Python\GIT_FINAL_WEB_PROJECT\TestCases\TCS_Register_Functionality.robot">
+<test id="s1-t1" name="TC1_Register_with_Success" line="16">
+<kw name="Start TestCase" owner="common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-11T15:04:34.886074" level="INFO">Opening browser 'chrome' to base url 'https://practicesoftwaretesting.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-11T15:04:34.885062" elapsed="2.135251"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-11T15:04:37.020313" elapsed="0.375984"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-11T15:04:42.396966" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-11T15:04:37.396297" elapsed="5.000669"/>
+</kw>
+<status status="PASS" start="2024-09-11T15:04:34.885062" elapsed="7.511904"/>
+</kw>
+<kw name="Click on Sign In Link" owner="HeaderPage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-11T15:04:42.398089" level="INFO">Clicking element 'xpath://*[text()="Sign in"]'.</msg>
+<arg>${SignInLink}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-11T15:04:42.397966" elapsed="0.034205"/>
+</kw>
+<status status="PASS" start="2024-09-11T15:04:42.396966" elapsed="0.036204"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-11T15:04:45.433185" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-11T15:04:42.433170" elapsed="3.000015"/>
+</kw>
+<kw name="Check Current URL" owner="common">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-09-11T15:04:45.437476" level="INFO">${current_url} = https://practicesoftwaretesting.com/auth/login</msg>
+<var>${current_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-09-11T15:04:45.433473" elapsed="0.004003"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-11T15:04:45.437476" level="INFO">The current URL is: https://practicesoftwaretesting.com/auth/login</msg>
+<arg>The current URL is: ${current_url}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-11T15:04:45.437476" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${current_url}</arg>
+<arg>${URL_text}</arg>
+<arg>The urls are not the same</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-09-11T15:04:45.437476" elapsed="0.000000"/>
+</kw>
+<arg>https://practicesoftwaretesting.com/auth/login</arg>
+<status status="PASS" start="2024-09-11T15:04:45.433473" elapsed="0.004003"/>
+</kw>
+<kw name="Click on Register Link" owner="SignInPage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-11T15:04:45.438560" level="INFO">Clicking element 'xpath://*[text()='Register your account']'.</msg>
+<arg>${RegisterLink}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-11T15:04:45.438560" elapsed="0.046030"/>
+</kw>
+<status status="PASS" start="2024-09-11T15:04:45.437476" elapsed="0.047114"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-11T15:04:50.485623" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-11T15:04:45.485590" elapsed="5.000033"/>
+</kw>
+<kw name="Check Current URL" owner="common">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-09-11T15:04:50.489450" level="INFO">${current_url} = https://practicesoftwaretesting.com/auth/register</msg>
+<var>${current_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-09-11T15:04:50.485894" elapsed="0.003556"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-11T15:04:50.489450" level="INFO">The current URL is: https://practicesoftwaretesting.com/auth/register</msg>
+<arg>The current URL is: ${current_url}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-11T15:04:50.489450" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${current_url}</arg>
+<arg>${URL_text}</arg>
+<arg>The urls are not the same</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-09-11T15:04:50.489450" elapsed="0.000000"/>
+</kw>
+<arg>https://practicesoftwaretesting.com/auth/register</arg>
+<status status="PASS" start="2024-09-11T15:04:50.485894" elapsed="0.004557"/>
+</kw>
+<kw name="Input First Name" owner="RegisterPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-11T15:04:50.490451" level="INFO">Typing text 'Python' into text field 'xpath://input[@id='first_name']'.</msg>
+<arg>${FirstNameBoxR}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-11T15:04:50.490451" elapsed="0.055421"/>
+</kw>
+<arg>Python</arg>
+<status status="PASS" start="2024-09-11T15:04:50.490451" elapsed="0.056422"/>
+</kw>
+<kw name="Input Last Name" owner="RegisterPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-11T15:04:50.546873" level="INFO">Typing text 'Learning' into text field 'xpath://input[@id='last_name']'.</msg>
+<arg>${LastNameBoxR}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-11T15:04:50.546873" elapsed="0.054462"/>
+</kw>
+<arg>Learning</arg>
+<status status="PASS" start="2024-09-11T15:04:50.546873" elapsed="0.054462"/>
+</kw>
+<kw name="Input Address" owner="RegisterPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-11T15:04:50.602335" level="INFO">Typing text 'Str.Valrea Rosie' into text field 'xpath://input[@id='address']'.</msg>
+<arg>${AddressBoxR}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-11T15:04:50.602335" elapsed="0.054376"/>
+</kw>
+<arg>Str.Valrea Rosie</arg>
+<status status="PASS" start="2024-09-11T15:04:50.601335" elapsed="0.055376"/>
+</kw>
+<kw name="Input Post Code" owner="RegisterPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-11T15:04:50.657803" level="INFO">Typing text '1230723' into text field 'xpath://input[@id='postcode']'.</msg>
+<arg>${PostCodeBoxR}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-11T15:04:50.657803" elapsed="0.048363"/>
+</kw>
+<arg>1230723</arg>
+<status status="PASS" start="2024-09-11T15:04:50.657803" elapsed="0.048363"/>
+</kw>
+<kw name="Input City" owner="RegisterPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-11T15:04:50.706166" level="INFO">Typing text 'Bucuresti' into text field 'xpath://input[@id='city']'.</msg>
+<arg>${CityBoxR}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-11T15:04:50.706166" elapsed="0.051518"/>
+</kw>
+<arg>Bucuresti</arg>
+<status status="PASS" start="2024-09-11T15:04:50.706166" elapsed="0.051518"/>
+</kw>
+<kw name="Input State" owner="RegisterPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-11T15:04:50.758684" level="INFO">Typing text 'Romania' into text field 'xpath://input[@id='state']'.</msg>
+<arg>${StateBoxR}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-11T15:04:50.757684" elapsed="0.053265"/>
+</kw>
+<arg>Romania</arg>
+<status status="PASS" start="2024-09-11T15:04:50.757684" elapsed="0.053265"/>
+</kw>
+<kw name="Input Phone Number" owner="RegisterPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-11T15:04:50.811949" level="INFO">Typing text '00407234654654' into text field 'xpath://*[@id='phone']'.</msg>
+<arg>${PhoneBoxR}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-11T15:04:50.811949" elapsed="0.053458"/>
+</kw>
+<arg>00407234654654</arg>
+<status status="PASS" start="2024-09-11T15:04:50.811949" elapsed="0.053458"/>
+</kw>
+<kw name="Select from dropdown Country" owner="RegisterPage">
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-09-11T15:04:50.866406" level="INFO">Selecting options from selection list 'xpath://*[@id='country']' by label Romania.</msg>
+<arg>${CountrySelectR}</arg>
+<arg>${select_text}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-09-11T15:04:50.866406" elapsed="0.048354"/>
+</kw>
+<arg>Romania</arg>
+<status status="PASS" start="2024-09-11T15:04:50.866406" elapsed="0.048354"/>
+</kw>
+<kw name="Input Date Of Birth" owner="RegisterPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-11T15:04:50.915759" level="INFO">Typing text '06091995' into text field 'xpath://*[@id='dob']'.</msg>
+<arg>${BirthDateSelectR}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-11T15:04:50.915759" elapsed="0.045466"/>
+</kw>
+<arg>06091995</arg>
+<status status="PASS" start="2024-09-11T15:04:50.915759" elapsed="0.045466"/>
+</kw>
+<kw name="Input Email Address" owner="RegisterPage">
+<kw name="Generate Random String" owner="String">
+<msg time="2024-09-11T15:04:50.962225" level="INFO">${random_string} = H1TztVlxST</msg>
+<var>${random_string}</var>
+<arg>10</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2024-09-11T15:04:50.962225" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-11T15:04:50.963225" level="INFO">H1TztVlxST</msg>
+<arg>${random_string}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-11T15:04:50.962225" elapsed="0.001000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-09-11T15:04:50.963225" level="INFO">${concatenated_mail} = H1TztVlxST@gmail.com</msg>
+<var>${concatenated_mail}</var>
+<arg>${random_string}@gmail.com</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-09-11T15:04:50.963225" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-11T15:04:50.963225" level="INFO">H1TztVlxST@gmail.com</msg>
+<arg>${concatenated_mail}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-11T15:04:50.963225" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-11T15:04:50.963225" level="INFO">Typing text 'H1TztVlxST@gmail.com' into text field 'xpath://input[@id='email']'.</msg>
+<arg>${EmailBoxR}</arg>
+<arg>${concatenated_mail}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-11T15:04:50.963225" elapsed="0.056565"/>
+</kw>
+<status status="PASS" start="2024-09-11T15:04:50.962225" elapsed="0.057565"/>
+</kw>
+<kw name="Input Password" owner="RegisterPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-11T15:04:51.020792" level="INFO">Typing text 'Scarface!1995@' into text field 'xpath://input[@id='password']'.</msg>
+<arg>${PasswordBoxR}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-11T15:04:51.020792" elapsed="0.053586"/>
+</kw>
+<arg>Scarface!1995@</arg>
+<status status="PASS" start="2024-09-11T15:04:51.019790" elapsed="0.054588"/>
+</kw>
+<kw name="Click Register button" owner="RegisterPage">
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-09-11T15:04:51.075377" level="INFO">Sending key(s) ('[Return]',) to xpath://button[text()='Register '] element.</msg>
+<msg time="2024-09-11T15:04:51.374610" level="INFO">Sending keys [Return]</msg>
+<arg>${RegisterButton}</arg>
+<arg>[Return]</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-09-11T15:04:51.074378" elapsed="0.310233"/>
+</kw>
+<status status="PASS" start="2024-09-11T15:04:51.074378" elapsed="0.310233"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-11T15:05:01.385643" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-11T15:04:51.385612" elapsed="10.000031"/>
+</kw>
+<kw name="Check Current URL" owner="common">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-09-11T15:05:01.389164" level="INFO">${current_url} = https://practicesoftwaretesting.com/auth/login</msg>
+<var>${current_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-09-11T15:05:01.385904" elapsed="0.003260"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-11T15:05:01.389164" level="INFO">The current URL is: https://practicesoftwaretesting.com/auth/login</msg>
+<arg>The current URL is: ${current_url}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-11T15:05:01.389164" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${current_url}</arg>
+<arg>${URL_text}</arg>
+<arg>The urls are not the same</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-09-11T15:05:01.389164" elapsed="0.001011"/>
+</kw>
+<arg>https://practicesoftwaretesting.com/auth/login</arg>
+<status status="PASS" start="2024-09-11T15:05:01.385904" elapsed="0.004271"/>
+</kw>
+<kw name="Finish TestCase" owner="common" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-09-11T15:05:01.390175" elapsed="2.110678"/>
+</kw>
+<status status="PASS" start="2024-09-11T15:05:01.390175" elapsed="2.110678"/>
+</kw>
+<status status="PASS" start="2024-09-11T15:04:34.884641" elapsed="28.616212"/>
+</test>
+<test id="s1-t2" name="TC2_Check_validation_for_mandatory_fields" line="40">
+<kw name="Start TestCase" owner="common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-11T15:05:03.501863" level="INFO">Opening browser 'chrome' to base url 'https://practicesoftwaretesting.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-11T15:05:03.501863" elapsed="2.001606"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-11T15:05:05.504470" elapsed="0.376896"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-11T15:05:10.881983" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-11T15:05:05.881366" elapsed="5.000617"/>
+</kw>
+<status status="PASS" start="2024-09-11T15:05:03.501863" elapsed="7.380120"/>
+</kw>
+<kw name="Click on Sign In Link" owner="HeaderPage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-11T15:05:10.882321" level="INFO">Clicking element 'xpath://*[text()="Sign in"]'.</msg>
+<arg>${SignInLink}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-11T15:05:10.882321" elapsed="0.035195"/>
+</kw>
+<status status="PASS" start="2024-09-11T15:05:10.882321" elapsed="0.035195"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-11T15:05:13.918551" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-11T15:05:10.917516" elapsed="3.001035"/>
+</kw>
+<kw name="Check Current URL" owner="common">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-09-11T15:05:13.922922" level="INFO">${current_url} = https://practicesoftwaretesting.com/auth/login</msg>
+<var>${current_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-09-11T15:05:13.918918" elapsed="0.004004"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-11T15:05:13.923922" level="INFO">The current URL is: https://practicesoftwaretesting.com/auth/login</msg>
+<arg>The current URL is: ${current_url}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-11T15:05:13.923922" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${current_url}</arg>
+<arg>${URL_text}</arg>
+<arg>The urls are not the same</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-09-11T15:05:13.923922" elapsed="0.000000"/>
+</kw>
+<arg>https://practicesoftwaretesting.com/auth/login</arg>
+<status status="PASS" start="2024-09-11T15:05:13.918918" elapsed="0.005004"/>
+</kw>
+<kw name="Click on Register Link" owner="SignInPage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-11T15:05:13.924922" level="INFO">Clicking element 'xpath://*[text()='Register your account']'.</msg>
+<arg>${RegisterLink}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-11T15:05:13.923922" elapsed="0.046095"/>
+</kw>
+<status status="PASS" start="2024-09-11T15:05:13.923922" elapsed="0.046095"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-11T15:05:15.971359" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-11T15:05:13.970017" elapsed="2.001342"/>
+</kw>
+<kw name="Check Current URL" owner="common">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-09-11T15:05:15.974359" level="INFO">${current_url} = https://practicesoftwaretesting.com/auth/register</msg>
+<var>${current_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-09-11T15:05:15.971359" elapsed="0.003000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-11T15:05:15.975360" level="INFO">The current URL is: https://practicesoftwaretesting.com/auth/register</msg>
+<arg>The current URL is: ${current_url}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-11T15:05:15.975360" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${current_url}</arg>
+<arg>${URL_text}</arg>
+<arg>The urls are not the same</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-09-11T15:05:15.975360" elapsed="0.000000"/>
+</kw>
+<arg>https://practicesoftwaretesting.com/auth/register</arg>
+<status status="PASS" start="2024-09-11T15:05:15.971359" elapsed="0.004001"/>
+</kw>
+<kw name="Click Register button" owner="RegisterPage">
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-09-11T15:05:15.976360" level="INFO">Sending key(s) ('[Return]',) to xpath://button[text()='Register '] element.</msg>
+<msg time="2024-09-11T15:05:16.265757" level="INFO">Sending keys [Return]</msg>
+<arg>${RegisterButton}</arg>
+<arg>[Return]</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-09-11T15:05:15.976360" elapsed="0.297504"/>
+</kw>
+<status status="PASS" start="2024-09-11T15:05:15.976360" elapsed="0.298505"/>
+</kw>
+<kw name="Verify First Name Error is displayed" owner="RegisterPage">
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-09-11T15:05:16.293066" level="INFO">Element 'xpath://div[@data-test="first-name-error"]' contains text 'First name is required'.</msg>
+<arg>${FirstNameErrorR}</arg>
+<arg>First name is required</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-09-11T15:05:16.274865" elapsed="0.018201"/>
+</kw>
+<status status="PASS" start="2024-09-11T15:05:16.274865" elapsed="0.018201"/>
+</kw>
+<kw name="Verify Last Name Error is displayed" owner="RegisterPage">
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-09-11T15:05:16.306178" level="INFO">Element 'xpath://div[@data-test="last-name-error"]' contains text 'fields.last-name.required'.</msg>
+<arg>${LastNameErrorR}</arg>
+<arg>fields.last-name.required</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-09-11T15:05:16.293066" elapsed="0.013112"/>
+</kw>
+<status status="PASS" start="2024-09-11T15:05:16.293066" elapsed="0.013112"/>
+</kw>
+<kw name="Verify Birth Date Error is displayed" owner="RegisterPage">
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-09-11T15:05:16.320371" level="INFO">Element 'xpath://div[@data-test="dob-error"]' contains text 'Date of Birth is required'.</msg>
+<arg>${BirthDateErrorR}</arg>
+<arg>Date of Birth is required</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-09-11T15:05:16.307274" elapsed="0.013097"/>
+</kw>
+<status status="PASS" start="2024-09-11T15:05:16.307274" elapsed="0.013097"/>
+</kw>
+<kw name="Verify Address Error is displayed" owner="RegisterPage">
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-09-11T15:05:16.334372" level="INFO">Element 'xpath://div[@data-test="address-error"]' contains text 'Address is required'.</msg>
+<arg>${AddressBoxErrorR}</arg>
+<arg>Address is required</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-09-11T15:05:16.321370" elapsed="0.013002"/>
+</kw>
+<status status="PASS" start="2024-09-11T15:05:16.321370" elapsed="0.013002"/>
+</kw>
+<kw name="Verify PostCode Error is displayed" owner="RegisterPage">
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-09-11T15:05:16.347478" level="INFO">Element 'xpath://div[@data-test="postcode-error"]' contains text 'Postcode is required'.</msg>
+<arg>${PostCodeErrorR}</arg>
+<arg>Postcode is required</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-09-11T15:05:16.334372" elapsed="0.013106"/>
+</kw>
+<status status="PASS" start="2024-09-11T15:05:16.334372" elapsed="0.013106"/>
+</kw>
+<kw name="Verify City Error is displayed" owner="RegisterPage">
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-09-11T15:05:16.361581" level="INFO">Element 'xpath://div[@data-test="city-error"]' contains text 'City is required'.</msg>
+<arg>${CityErrorR}</arg>
+<arg>City is required</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-09-11T15:05:16.348479" elapsed="0.013102"/>
+</kw>
+<status status="PASS" start="2024-09-11T15:05:16.348479" elapsed="0.013102"/>
+</kw>
+<kw name="Verify State Error is displayed" owner="RegisterPage">
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-09-11T15:05:16.375584" level="INFO">Element 'xpath://div[@data-test="state-error"]' contains text 'State is required'.</msg>
+<arg>${StateErrorR}</arg>
+<arg>State is required</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-09-11T15:05:16.362581" elapsed="0.013003"/>
+</kw>
+<status status="PASS" start="2024-09-11T15:05:16.362581" elapsed="0.013003"/>
+</kw>
+<kw name="Verify Country Error is displayed" owner="RegisterPage">
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-09-11T15:05:16.388686" level="INFO">Element 'xpath://div[@data-test="country-error"]' contains text 'Country is required'.</msg>
+<arg>${CountryErrorR}</arg>
+<arg>Country is required</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-09-11T15:05:16.376584" elapsed="0.012102"/>
+</kw>
+<status status="PASS" start="2024-09-11T15:05:16.376584" elapsed="0.012102"/>
+</kw>
+<kw name="Verify Phone Error is displayed" owner="RegisterPage">
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-09-11T15:05:16.400797" level="INFO">Element 'xpath://div[@data-test="phone-error"]' contains text 'Phone is required.'.</msg>
+<arg>${PhoneErrorR}</arg>
+<arg>Phone is required.</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-09-11T15:05:16.389687" elapsed="0.011110"/>
+</kw>
+<status status="PASS" start="2024-09-11T15:05:16.388686" elapsed="0.012111"/>
+</kw>
+<kw name="Verify Email Error is displayed" owner="RegisterPage">
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-09-11T15:05:16.411799" level="INFO">Element 'xpath://div[@data-test="email-error"]' contains text 'Email is required'.</msg>
+<arg>${EmailErrorR}</arg>
+<arg>Email is required</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-09-11T15:05:16.401797" elapsed="0.011002"/>
+</kw>
+<status status="PASS" start="2024-09-11T15:05:16.400797" elapsed="0.012002"/>
+</kw>
+<kw name="Verify Password Error is displayed" owner="RegisterPage">
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-09-11T15:05:16.422897" level="INFO">Element 'xpath://div[@data-test="password-error"]' contains text 'Password is required'.</msg>
+<arg>${PasswordErrorR}</arg>
+<arg>Password is required</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-09-11T15:05:16.412799" elapsed="0.011099"/>
+</kw>
+<status status="PASS" start="2024-09-11T15:05:16.412799" elapsed="0.011099"/>
+</kw>
+<kw name="Finish TestCase" owner="common" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-09-11T15:05:16.423898" elapsed="2.102900"/>
+</kw>
+<status status="PASS" start="2024-09-11T15:05:16.423898" elapsed="2.102900"/>
+</kw>
+<status status="PASS" start="2024-09-11T15:05:03.501863" elapsed="15.024935"/>
+</test>
+<status status="PASS" start="2024-09-11T15:04:34.687080" elapsed="43.840846"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="TCS Register Functionality">TCS Register Functionality</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
